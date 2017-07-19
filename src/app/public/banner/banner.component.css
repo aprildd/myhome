@@ -1,0 +1,20 @@
+@media screen and (min-width: 992px) {
+    .my-banner {
+        background-image: url("/assets/images/test.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .my-banner {
+        background-color: #000000;
+    }
+}
+
+.jumbotron {
+    background: transparent;
+    color: #f7f7f9;
+}
