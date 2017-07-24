@@ -5,13 +5,15 @@ import { HttpModule, Http } from '@angular/http';
 
 import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxTimelineModule } from 'ngx-timeline';
 
 import { PublicModule } from './public/public.module';
 
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 export function createTranslateHttpLoader(http: Http) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,12 +23,14 @@ export function createTranslateHttpLoader(http: Http) {
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent
+        AboutComponent,
+        BlogComponent
     ],
     imports: [
         BrowserModule,
         PublicModule,
         HttpModule,
+        NgxTimelineModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -36,8 +40,12 @@ export function createTranslateHttpLoader(http: Http) {
         }),
         RouterModule.forRoot([
             {
-                path: 'home',
+                path: '',
                 component: HomeComponent
+            },
+            {
+                path: 'blog',
+                component: BlogComponent
             },
             {
             	path: 'about',

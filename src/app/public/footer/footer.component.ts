@@ -8,12 +8,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public translateService: TranslateService) { }
+  currentLanguage: string;
+
+  constructor(public translateService: TranslateService) { 
+    this.currentLanguage = this.translateService.currentLang;
+  }
 
   ngOnInit() {
   }
 
   changeLanguage (str: string) {
     this.translateService.use(str);
+    this.currentLanguage = str;
+    //fa fa-check
   }
 }

@@ -5,5 +5,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  title = 'My Home';
+  constructor() {
+
+  }
+
+  onInit() {
+    
+  }
 }

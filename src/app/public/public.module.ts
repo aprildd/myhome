@@ -8,7 +8,6 @@ import { PublicRoutingModule } from './public.routing.module';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { BannerComponent } from './banner/banner.component';
 
 import { SharedModule } from '../shared/shared.module';
@@ -21,7 +20,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [],
-  declarations: [HeaderComponent, FooterComponent, CarouselComponent, BannerComponent],
-  exports: [HeaderComponent, FooterComponent, CarouselComponent, BannerComponent]
+  declarations: [HeaderComponent, FooterComponent, BannerComponent],
+  exports: [HeaderComponent, FooterComponent, BannerComponent]
 })
 export class PublicModule { }
