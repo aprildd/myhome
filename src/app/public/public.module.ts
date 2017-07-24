@@ -6,6 +6,8 @@ import { HttpModule, Http } from '@angular/http';
 
 import { PublicRoutingModule } from './public.routing.module';
 
+import { PublicComponent } from './public.component';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
@@ -20,7 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [],
-  declarations: [HeaderComponent, FooterComponent, BannerComponent],
+  declarations: [PublicComponent, HeaderComponent, FooterComponent, BannerComponent],
   exports: [HeaderComponent, FooterComponent, BannerComponent]
 })
 export class PublicModule { }
