@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { DemosComponent } from './pages/demos/demos.component';
 
 export function createTranslateHttpLoader(http: Http) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,7 +25,8 @@ export function createTranslateHttpLoader(http: Http) {
         AppComponent,
         HomeComponent,
         AboutComponent,
-        BlogComponent
+        BlogComponent,
+        DemosComponent
     ],
     imports: [
         BrowserModule,
@@ -46,6 +48,10 @@ export function createTranslateHttpLoader(http: Http) {
             {
                 path: 'blog',
                 component: BlogComponent
+            },
+            {
+                path: 'demos',
+                component: DemosComponent
             },
             {
             	path: 'about',
