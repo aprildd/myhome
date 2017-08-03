@@ -1,17 +1,18 @@
-<div class="btn-group my-float-right">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ 'LANGUAGE' | translate }}
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" [ngClass]='{"fa fa-check":currentLanguage == "zh"}' (click)='changeLanguage("zh")'>
-      <label>
-        简体中文
-      </label>
-    </a>
-    <a class="dropdown-item" [ngClass]='{"fa fa-check":currentLanguage == "en"}' (click)='changeLanguage("en")'>
-      <label>
-        English
-      </label>
-    </a>
+
+  <div class="btn-group my-float-right">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{ 'LANGUAGE' | translate }}
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" [ngClass]='{"fa fa-check":currentLanguage == "zh"}' (click)='changeLanguage("zh")'>
+        <label>
+          简体中文
+        </label>
+      </a>
+      <a class="dropdown-item" [ngClass]='{"fa fa-check":currentLanguage == "en"}' (click)='changeLanguage("en")'>
+        <label>
+          English
+        </label>
+      </a>
+    </div>
   </div>
-</div>

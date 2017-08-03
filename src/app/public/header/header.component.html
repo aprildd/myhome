@@ -5,31 +5,36 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand hidden-md-down hidden-sm-down hidden-xs-down" href="">
+  <a class="navbar-brand hidden-md-down hidden-sm-down hidden-xs-down" routerLink="">
     {{ 'LOGO' | translate }}
   </a>
-  <a class="navbar-brand hidden-lg-up hidden-xl-up mr-auto" href="" style="margin-left: auto;margin-right: auto;">
+  <a class="navbar-brand hidden-lg-up hidden-xl-up mr-auto" routerLink="./" style="margin-left: auto;margin-right: auto;">
     {{ 'LOGO' | translate }}
   </a>
 
   <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="blog">
+        <a class="nav-link" routerLink="./blog">
           {{ 'BLOG' | translate }}
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="demos">
+        <a class="nav-link" routerLink="./demos"> 
           {{ 'DEMOS' | translate }}
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about">
+        <a class="nav-link" routerLink="./about">
           {{ 'ABOUT' | translate }}
         </a>
       </li>
     </ul>
-  </div>
 
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="{{ 'SEARCH' | translate }}">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{{ 'SEARCH' | translate }}</button>
+    </form>
+
+  </div>
 </nav>

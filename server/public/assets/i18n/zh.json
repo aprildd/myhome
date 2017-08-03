@@ -12,6 +12,10 @@
   "BANNER_MINI_TEXT": "这是常飞的个人网站。",
   "LEARN_MORE": "了解更多",
   "READ_MORE": "阅读全文",
+  "SEARCH": "搜索",
   "CANCEL": "取消",
-  "OK": "确认"
+  "OK": "确认",
+  "GRATUDATE": "毕业",
+  "DEMO_1_TITLE": "峨眉飞雪",
+  "DEMO_1_DESCRIPTION": "使用cocos-creator引擎完成的HTML5游戏，渲染方式基于WebGL，包含微信分享，微信登录等接入。"
 }

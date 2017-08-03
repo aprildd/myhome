@@ -11,6 +11,7 @@ import { PublicComponent } from './public.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
+import { UserComponent } from './user/user.component';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -22,7 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [],
-  declarations: [PublicComponent, HeaderComponent, FooterComponent, BannerComponent],
-  exports: [HeaderComponent, FooterComponent, BannerComponent]
+  declarations: [PublicComponent, HeaderComponent, FooterComponent, BannerComponent, UserComponent],
+  exports: [HeaderComponent, FooterComponent, BannerComponent, UserComponent]
 })
 export class PublicModule { }

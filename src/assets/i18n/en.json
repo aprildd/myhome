@@ -12,6 +12,10 @@
     "BANNER_MINI_TEXT": "This is ChangFei's personal site.",
     "LEARN_MORE": "Learn more",
     "READ_MORE": "read more",
+    "SEARCH": "Search",
     "CANCEL": "CANCEL",
-    "OK": "OK"
+    "OK": "OK",
+    "GRATUDATE": "GRATUDATE",
+    "DEMO_1_TITLE": "Skiing Boy",
+    "DEMO_1_DESCRIPTION": "HTML5 game base on cocos-creator & WebGL, include wechat share & wechat login etc."
 }

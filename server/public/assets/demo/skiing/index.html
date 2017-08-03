@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>峨眉飞雪</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content=""/>
+  <meta name="x5-orientation" content="">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.css?version=0.1"/>
+
+</head>
+<body>
+  <div id="splash">
+    <div id="bg1" class="slideshow-image1" style="background-image: url('bg/bg1.jpg');z-index: 4"></div>
+    <div id="bg2" class="slideshow-image2" style="background-image: url('bg/bg2.jpg');z-index: 3"></div>
+    <div id="bg3" class="slideshow-image3" style="background-image: url('bg/bg3.jpg');z-index: 2"></div>
+    <div id="bg4" class="slideshow-image4" style="background-image: url('bg/bg4.jpg');z-index: 1"></div>
+
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
+    </div>
+  </div>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+
+<!--
+<script src="src/settings.js?version=0.3.2" charset="utf-8"></script>
+<script src="main.js?version=0.3.2" charset="utf-8"></script>
+-->
+<script type="text/javascript">
+
+  var GameCanvas = document.querySelector('#GameCanvas');
+  GameCanvas.style.display = 'none';
+
+  window.showTextureOK = false;
+  var head = document.getElementsByTagName("head")[0];
+
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'consoleHook.js';
+  head.appendChild(script);
+
+  script.onload = function () {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'src/settings.js?version=' + Date.now();
+    head.appendChild(script);
+
+    script.onload = function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'main.js?version=' + Date.now();
+      head.appendChild(script);
+
+      script.onload = function () {
+        var o = document.querySelector('#bg4');
+        // 动画结束时事件
+        o.addEventListener("webkitAnimationEnd", function() {
+            //console.log("o动画结束");
+            window.showTextureOK = true;
+
+            if(!window.bEngineLoaded) {
+              o.style.opacity = '1';
+              var checkEngineLoaded = function () {
+                if(window.bEngineLoaded) {
+                  o.style.display = 'none';
+                  return;
+                }
+
+                setTimeout(checkEngineLoaded, 100);
+              };
+
+              setTimeout(checkEngineLoaded, 100);
+            } else {
+              o.style.display = 'none';
+            }
+        });
+      }
+    };
+  };
+</script>
+
+</body>
+</html>
