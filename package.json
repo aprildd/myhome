@@ -25,6 +25,7 @@
     "@ngx-translate/core": "^7.1.0",
     "@ngx-translate/http-loader": "^0.1.0",
     "bootstrap": "^4.0.0-alpha.6",
+    "bricks.js": "^1.8.0",
     "core-js": "^2.4.1",
     "express": "^4.15.3",
     "font-awesome": "^4.7.0",
